@@ -20,5 +20,6 @@ Cada workshop vive en su carpeta dentro de `workshops/` y trae su propio README.
 ## Láminas
 
 - [Sesión 2: continuación y lab 2](laminas/workshop-opencode-sesion-2.pdf)
+- [Sesión 3: RAG y lab 3](laminas/workshop-opencode-sesion-3.pdf)
 
 Todos los datos de este repositorio son ficticios.
