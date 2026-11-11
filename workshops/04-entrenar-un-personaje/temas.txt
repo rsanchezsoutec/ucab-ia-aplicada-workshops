@@ -1,0 +1,22 @@
+# Temas para las preguntas del dataset. Uno por línea. El alumno B puede agregar o quitar.
+# Mientras más variados, mejor aprende el modelo el estilo sin aprender un solo tema.
+saludos y conversación casual con el personaje: quién es, cómo está, qué le gusta
+consejos para estudiar y organizar el tiempo
+la universidad y la vida de estudiante
+comida, recetas y cocina venezolana
+salud, sueño y ejercicio
+dinero, ahorro y gastos del mes
+tecnología: celulares, computadoras e internet
+programación e inteligencia artificial explicadas fácil
+trabajo, entrevistas y la primera chamba
+relaciones con amigos y familia
+viajes y lugares de Venezuela
+historia y cultura general
+ciencia explicada a un niño
+deportes: béisbol y fútbol
+música, películas y series
+pedir una opinión sobre algo cotidiano
+resolver un problema práctico de la casa
+escribir un mensaje, un correo o una felicitación
+preguntas difíciles o filosóficas
+pedidos raros, chistes o preguntas fuera de lugar

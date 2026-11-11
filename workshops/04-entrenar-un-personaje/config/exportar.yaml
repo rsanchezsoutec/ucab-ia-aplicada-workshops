@@ -1,0 +1,11 @@
+# Extra, fuera de las 3 horas: fusiona el adaptador con el modelo base en un modelo nuevo.
+#   llamafactory-cli export config/exportar.yaml
+# No se usa un modelo cuantizado para fusionar.
+model_name_or_path: modelos/Qwen3-4B-Instruct-2507
+adapter_name_or_path: salidas/adaptador
+template: qwen3_nothink
+trust_remote_code: true
+export_dir: salidas/modelo_fusionado
+export_size: 5
+export_device: cpu
+export_legacy_format: false

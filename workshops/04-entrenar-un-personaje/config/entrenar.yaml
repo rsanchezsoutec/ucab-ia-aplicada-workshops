@@ -1,0 +1,50 @@
+# Entrenamiento LoRA del personaje. Basado en examples/train_lora/qwen3_lora_sft.yaml
+# del playbook de NVIDIA para LLaMA Factory en DGX Spark.
+# Se ejecuta desde la carpeta del lab:  llamafactory-cli train config/entrenar.yaml
+
+### modelo
+model_name_or_path: modelos/Qwen3-4B-Instruct-2507   # el modelo base que bajó el alumno A
+trust_remote_code: true
+
+### método
+stage: sft                 # ajuste supervisado: pregunta -> respuesta
+do_train: true
+finetuning_type: lora
+lora_rank: 8               # capacidad del adaptador. Más alto = más parámetros y más riesgo de memorizar
+lora_target: all           # LoRA en todas las capas lineales del modelo
+# lora_alpha: 16           # si no se pone, LLaMA Factory usa 2 x lora_rank
+
+### dataset
+dataset_dir: datos         # aquí están dataset_info.json y personaje.json
+dataset: personaje
+template: qwen3_nothink    # el formato de chat de Qwen3 sin bloque de razonamiento
+cutoff_len: 1024           # largo máximo de un ejemplo, en tokens
+max_samples: 1000
+preprocessing_num_workers: 8
+dataloader_num_workers: 2
+
+### salida
+output_dir: salidas/adaptador
+logging_steps: 5
+save_steps: 500
+plot_loss: true            # deja la curva en salidas/adaptador/training_loss.png
+overwrite_output_dir: true
+save_only_model: false
+report_to: none
+
+### entrenamiento
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8   # 8 ejemplos por cada actualización de los pesos
+learning_rate: 1.0e-4
+num_train_epochs: 3.0            # vueltas completas al dataset
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+### evaluación: separa el 10 % del dataset para ver si el modelo memoriza
+val_size: 0.1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 20

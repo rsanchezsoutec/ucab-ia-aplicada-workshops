@@ -1,0 +1,9 @@
+factoryEnv/
+LLaMA-Factory/
+modelos/*
+!modelos/.gitkeep
+salidas/*
+!salidas/.gitkeep
+datos/personaje.json
+datos/personaje.jsonl
+__pycache__/
