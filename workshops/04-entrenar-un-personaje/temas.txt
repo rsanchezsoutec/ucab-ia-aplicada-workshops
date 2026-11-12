@@ -1,4 +1,4 @@
-# Temas para las preguntas del dataset. Uno por línea. El alumno B puede agregar o quitar.
+# Temas para las preguntas del dataset del problema 11. Uno por línea. La mesa puede agregar o quitar.
 # Mientras más variados, mejor aprende el modelo el estilo sin aprender un solo tema.
 saludos y conversación casual con el personaje: quién es, cómo está, qué le gusta
 consejos para estudiar y organizar el tiempo

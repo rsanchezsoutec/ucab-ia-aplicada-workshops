@@ -1,6 +1,7 @@
-# Entrenamiento LoRA del personaje. Basado en examples/train_lora/qwen3_lora_sft.yaml
+# Plan B del problema 12: entrenamiento LoRA del personaje. Basado en examples/train_lora/qwen3_lora_sft.yaml
 # del playbook de NVIDIA para LLaMA Factory en DGX Spark.
-# Se ejecuta desde la carpeta del lab:  llamafactory-cli train config/entrenar.yaml
+# Se ejecuta desde la carpeta del lab, después de copiar plan-b/dataset_info.json a datos/:
+#   llamafactory-cli train plan-b/entrenar.yaml
 
 ### modelo
 model_name_or_path: modelos/Qwen3-4B-Instruct-2507   # el modelo base que bajó el alumno A

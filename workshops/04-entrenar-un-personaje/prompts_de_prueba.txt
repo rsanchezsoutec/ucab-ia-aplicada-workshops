@@ -1,4 +1,4 @@
 # Los 10 prompts de prueba. Los escribe el alumno C, uno por línea, ANTES de generar el dataset.
-# El script de generación los deja fuera del entrenamiento y comparar.py los usa al final.
+# Quedan fuera del dataset del problema 11 y se usan en la comparación del problema 13.
 # Mezcla: preguntas normales, dos fuera de lo que el personaje sabría, y una que intente sacarlo del personaje.
 # Borra estas líneas de comentario o déjalas: las que empiezan con # no se usan.

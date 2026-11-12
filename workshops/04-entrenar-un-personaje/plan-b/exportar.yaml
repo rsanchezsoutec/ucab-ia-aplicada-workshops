@@ -1,5 +1,5 @@
 # Extra, fuera de las 3 horas: fusiona el adaptador con el modelo base en un modelo nuevo.
-#   llamafactory-cli export config/exportar.yaml
+#   llamafactory-cli export plan-b/exportar.yaml
 # No se usa un modelo cuantizado para fusionar.
 model_name_or_path: modelos/Qwen3-4B-Instruct-2507
 adapter_name_or_path: salidas/adaptador

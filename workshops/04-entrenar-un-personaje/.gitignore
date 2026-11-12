@@ -4,6 +4,7 @@ modelos/*
 !modelos/.gitkeep
 salidas/*
 !salidas/.gitkeep
-datos/personaje.json
-datos/personaje.jsonl
+datos/*
+!datos/.gitkeep
+config/entrenar.yaml
 __pycache__/

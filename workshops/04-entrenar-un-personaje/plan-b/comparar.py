@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Antes y después: los mismos prompts de prueba a tres versiones del modelo.
+"""Plan B del problema 13. Antes y después: los mismos prompts de prueba a tres versiones del modelo.
 
   1. Base: el modelo sin ajustar, sin instrucciones.
   2. Base + ficha: el modelo sin ajustar, con la ficha del personaje como mensaje de sistema.
   3. LoRA: el modelo con el adaptador entrenado, sin instrucciones.
 
-Deja salidas/comparacion.html (y comparacion.json) con las tres respuestas lado a lado
+Deja salidas/13-comparacion.html (y 13-comparacion.json) con las tres respuestas lado a lado
 y la curva de loss del entrenamiento.
 
 Necesita el entorno de LLaMA Factory (torch, transformers y peft):
   source factoryEnv/bin/activate
-  python scripts/comparar.py
+  python plan-b/comparar.py
 """
 import argparse
 import base64
@@ -45,7 +45,7 @@ def main():
     ap.add_argument("--adaptador", default="salidas/adaptador")
     ap.add_argument("--prompts", default="prompts_de_prueba.txt")
     ap.add_argument("--ficha", default="personaje.md")
-    ap.add_argument("--salida", default="salidas/comparacion.html")
+    ap.add_argument("--salida", default="salidas/13-comparacion.html")
     ap.add_argument("--max-tokens", type=int, default=300)
     args = ap.parse_args()
     ruta = lambda p: (AQUI / p) if not Path(p).is_absolute() else Path(p)

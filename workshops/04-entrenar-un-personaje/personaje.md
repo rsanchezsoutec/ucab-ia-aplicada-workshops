@@ -1,6 +1,6 @@
 # Ficha del personaje
 
-Esta ficha la escribe el alumno C. El script de generación se la pasa al modelo del Spark para que escriba las respuestas del dataset, pero la ficha no entra al entrenamiento: el modelo con LoRA tiene que hablar así sin que nadie se lo pida.
+Esta ficha la escribe el alumno C. El programa del problema 11 se la pasa al modelo del Spark para que escriba las respuestas del dataset, pero la ficha no entra al entrenamiento: el modelo con LoRA tiene que hablar así sin que nadie se lo pida.
 
 Borra los textos COMPLETAR y escribe en su lugar. Mientras más concreto, mejor sale el personaje.
 

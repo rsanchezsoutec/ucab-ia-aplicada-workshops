@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera el dataset sintético del personaje con el modelo que ya sirve el Spark.
+"""Plan B del problema 11: genera el dataset sintético del personaje con el modelo que ya sirve el Spark.
 
 Dos pasos:
   1. Pide al modelo preguntas variadas sobre los temas de temas.txt.
@@ -13,9 +13,9 @@ Solo usa la biblioteca estándar de Python. Si se corta, se vuelve a ejecutar y 
 quedó (el avance se guarda en datos/personaje.jsonl).
 
 Ejemplos:
-  python3 scripts/generar_dataset.py --prueba
-  python3 scripts/generar_dataset.py --cantidad 400
-  python3 scripts/generar_dataset.py --url http://127.0.0.1:11434/v1 --modelo qwen3:8b   # con Ollama
+  python3 plan-b/generar_dataset.py --prueba
+  python3 plan-b/generar_dataset.py --cantidad 400
+  python3 plan-b/generar_dataset.py --url http://127.0.0.1:11434/v1 --modelo qwen3:8b   # con Ollama
 """
 import argparse
 import concurrent.futures as cf
