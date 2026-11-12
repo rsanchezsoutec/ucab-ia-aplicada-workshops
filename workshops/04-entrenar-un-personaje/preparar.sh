@@ -9,7 +9,9 @@ echo "Revisando el Spark…"
 revisar "GPU visible (nvidia-smi)" "nvidia-smi" "avisa al facilitador"
 revisar "CUDA (nvcc)" "nvcc --version" "avisa al facilitador"
 revisar "Python 3" "python3 --version" "avisa al facilitador"
-revisar "venv de Python" "python3 -m venv --help" "avisa al facilitador: falta python3-venv"
+# Crea un entorno de verdad: en Ubuntu, sin python3-venv el comando existe pero falla al crear el entorno.
+probar_venv() { local d rc; d=$(mktemp -d) || return 1; python3 -m venv "$d/v" && "$d/v/bin/python" -m pip --version; rc=$?; rm -rf "$d"; return $rc; }
+revisar "venv de Python con pip" "probar_venv" "avisa al facilitador: hay que instalar python3-venv"
 revisar "Cabeceras de Python (python3-dev)" \
   "python3 -c 'import os,sysconfig,sys; sys.exit(0 if os.path.exists(os.path.join(sysconfig.get_paths()[\"include\"],\"Python.h\")) else 1)'" \
   "avisa al facilitador: hay que instalar python3-dev"
